@@ -1,0 +1,64 @@
+html {
+    font-family: Arial;
+}
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%;
+    width: 220px; 
+    position: fixed; 
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#191970	 ;
+    color:  #ffffe6;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* The navigation menu links */
+.sidebar a {
+    text-decoration: none;
+    color:aliceblue;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+    margin-left: 240px; 
+    padding: 20px;
+}
+
+.avatar {
+    width: 80%;
+    border-radius: 10%;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.post img {
+    width: 80%;
+    border-radius: 5px;
+}
+
+span{
+    color: blue;
+    font-weight:bolder;
+}

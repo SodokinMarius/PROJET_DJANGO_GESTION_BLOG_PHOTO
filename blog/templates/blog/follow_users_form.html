@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Suivre des utilisateurs</h2>
+
+<form action="" method="post">
+
+    {{ form.as_p }}
+    {% csrf_token %}
+    <button type="submit">Confirmer</button>
+</form>
+{% endblock content %}

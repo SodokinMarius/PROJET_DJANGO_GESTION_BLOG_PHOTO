@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Les flux de photo</h2>
+    {% for photo in page_obj %}
+      {% include 'blog/partials/photo_snippet.html' %}     
+    {% endfor %}
+    <hr>
+    {% include 'partials/page_navigators.html' %}
+{% endblock content %}
+

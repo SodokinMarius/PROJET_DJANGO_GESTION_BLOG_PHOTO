@@ -1,0 +1,9 @@
+
+<div class="post">
+    <a href="{% url 'view_blog' instance.id %}">
+        <h4>Billet : {{ instance.title }}</h4>
+        <img src="{{ instance.photo.image.url }}">
+        <p><strong>Auteur : {{ instance.contributors.all|join:", " }}</strong></p>
+        <p>Date d'Ecriture  :  <span>{{ instance.date_created }}</span></p>
+    </a>
+</div>

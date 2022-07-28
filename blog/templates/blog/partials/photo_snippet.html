@@ -1,0 +1,7 @@
+{%load blog_extras%}
+<div class="post">
+    <img src="{{ instance.image.url }}">
+    <p>{{ instance.caption }}</p>
+    <p><strong>Prise par {% get_poster_display instance.uploader %}</strong></p> <!--Appel du balise paersonnalisée-->
+    <p>Date de Creation:<span> {{ instance.date_created |get_posted_at_display}}</span></p>  <!--Appel du filtre -->
+</div>

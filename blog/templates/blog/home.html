@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load blog_extras %} <!--Chargement du filtre personnalisé-->
+{% block content %}
+    <h2>Votre flux</h2>
+    <div class="grid-container">
+        {% for instance in page_obj %}
+            {% if instance|model_type == 'Blog' %}
+                {% include 'blog/partials/blog_snippet.html' with blog=instance %} <!--Inclusion -->
+                
+            {% elif instance|model_type == 'Photo' %}
+              {% include 'blog/partials/photo_snippet.html' with photo=instance %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    <span>
+        {% if page_obj.has_previous %}
+        <a href="?page=1">prémière</a>
+        <a href="?page={{page_obj.previous_page_number}}">précédent</a>
+    {% endif %}
+
+    <span>
+        Page {{page_obj.number}} sur {{page_obj.paginator.num_pages}}
+    </span>
+
+    {% if page_obj.has_next %}
+    <a href="?page={{page_obj.next_page_number}}">Suivante</a>
+    <a href="?page={{page_obj.paginator_num_pages}}">Dernière</a>
+    {% endif %}
+    </span>
+{% endblock content %}
